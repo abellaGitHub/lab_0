@@ -35,5 +35,10 @@ public class TailsTest {
 		
 		assertThat(tails.get(tails.size()-1), Matchers.equalTo(""));
 	}
+	
+	@Test
+	public void tailsMidElementShouldHaveAppropriateLength() {
+		assertThat(tails.get(HELLO.length() / 2), Matchers.equalTo(HELLO.substring(HELLO.length() / 2)));
+	}
 
 }
